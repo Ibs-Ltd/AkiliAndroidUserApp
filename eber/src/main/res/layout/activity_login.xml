@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_black"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <include layout="@layout/toolbar_app_custom" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:id="@+id/llMobileNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:transitionName="@string/transition_string_text">
+
+                <com.elluminati.eber.components.MyFontTextView
+                    android:id="@+id/ivGetMovingWith"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_horizontal_margin"
+                    android:text="@string/text_get_moving_with"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/size_dialog_notification" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/activity_horizontal_margin"
+                    android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                    android:orientation="horizontal">
+
+                    <com.elluminati.eber.components.MyFontTextView
+                        android:id="@+id/tvCountryCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:paddingStart="@dimen/activity_horizontal_margin"
+                        android:paddingEnd="@dimen/activity_horizontal_margin"
+                        android:singleLine="true"
+                        android:textColor="@color/color_app_button"
+                        android:textSize="@dimen/size_general"
+                        tools:text="+91" />
+
+                    <com.elluminati.eber.components.MyFontEdittextView
+                        android:id="@+id/etContactNumber"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                        android:layout_weight="1"
+                        android:focusable="true"
+                        android:hint="@string/text_enter_your_mobile_number"
+                        android:inputType="numberSigned"
+                        android:singleLine="true"
+                        android:textColor="@color/color_app_text"
+                        android:textColorHint="@color/color_app_label"
+                        android:textSize="@dimen/size_general"
+                        android:theme="@style/TextInputLayoutStyle" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </ScrollView>
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnGetOtp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:baselineAlignBottom="true"
+            app:backgroundTint="@color/color_app_button"
+            app:srcCompat="@drawable/ic_arrow_forward" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/verticalGuideline_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.04" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/verticalGuideline_right_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.96" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/color_app_status_bar"
+        android:paddingTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.35"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/verticalGuideline_left_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.04" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/verticalGuideline_right_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.96" />
+
+        <TextView
+            android:id="@+id/signInTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sourcesanspro_regular"
+            android:lineHeight="23.5dp"
+            android:text="@string/sign_in"
+            android:textColor="@color/ebon_clay_background"
+            android:textFontWeight="700"
+            android:textSize="@dimen/ib_fr_space_20"
+            app:layout_constraintStart_toEndOf="@+id/verticalGuideline_left_1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/sourcesanspro_regular"
+            android:lineHeight="16.41dp"
+            android:text="@string/sign_in_description"
+            android:textColor="@color/ebon_clay_background"
+            android:textFontWeight="400"
+            android:textSize="14dp"
+            app:layout_constraintEnd_toStartOf="@+id/verticalGuideline_right_2"
+            app:layout_constraintStart_toEndOf="@+id/verticalGuideline_left_1"
+            app:layout_constraintTop_toBottomOf="@+id/signInTitle" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:elevation="@dimen/ib_fr_space_20"
+        app:cardCornerRadius="@dimen/ib_fr_space_20"
+        app:cardElevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/verticalGuideline_right_1"
+        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintStart_toEndOf="@+id/verticalGuideline_left"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/ebon_clay_background"
+            android:paddingLeft="@dimen/ib_fr_space_20">
+
+            <TextView
+                android:id="@+id/numberTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/sourcesanspro_regular"
+                android:lineHeight="16.41dp"
+                android:text="@string/enter_your_phone_number"
+                android:textColor="@color/color_app_status_bar"
+                android:textFontWeight="400"
+                android:textSize="14dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/countryFlag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/country_flag"
+                app:layout_constraintBottom_toBottomOf="@+id/numberEdittext"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/numberEdittext" />
+
+            <TextView
+                android:id="@+id/countryCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/sourcesanspro_bold"
+                android:lineHeight="20dp"
+                android:text="+255"
+                android:textColor="@color/color_app_status_bar"
+                android:textFontWeight="600"
+                android:textSize="16dp"
+                app:layout_constraintStart_toEndOf="@id/countryFlag"
+                app:layout_constraintTop_toTopOf="@+id/countryFlag" />
+
+            <ImageView
+                android:id="@+id/countryArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/ic_baseline_keyboard_arrow_down_24"
+                app:layout_constraintStart_toEndOf="@+id/countryCode"
+                app:layout_constraintTop_toTopOf="@+id/countryCode" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/countryGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="countryArrow,countryCode,countryFlag" />
+
+            <EditText
+                android:id="@+id/numberEdittext"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/ebon_clay_background"
+                android:hint="0742 123 456"
+                android:inputType="number"
+                android:maxLength="10"
+                android:textColor="@color/color_white"
+                android:textColorHint="#3D4851"
+                android:textSize="22dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/countryArrow"
+                app:layout_constraintTop_toBottomOf="@+id/numberTitle" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp"
+                android:background="#3D4851"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/countryArrow"
+                app:layout_constraintTop_toBottomOf="@+id/numberEdittext" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/continueLogin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/green_btn_enable"
+        android:fontFamily="@font/sourcesanspro_regular"
+        android:lineHeight="23.5dp"
+        android:text="Continue"
+        android:padding="10dp"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:textColor="@color/ebon_clay_background"
+        android:textFontWeight="700"
+        android:textSize="@dimen/ib_fr_space_20"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.90"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/verticalGuideline_right_1"
+        app:layout_constraintStart_toEndOf="@+id/verticalGuideline_left"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

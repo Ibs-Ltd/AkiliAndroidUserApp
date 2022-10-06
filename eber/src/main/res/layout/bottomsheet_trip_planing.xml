@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llPlanningTrip"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottom_sheet_trip_rounded"
+    android:elevation="@dimen/ib_fr_space_20"
+    android:paddingHorizontal="20dp"
+    android:paddingVertical="@dimen/ib_fr_space_20"
+    app:layout_behavior="@string/bottom_sheet_behavior">
+
+    <TextView
+        android:id="@+id/tripTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sourcesanspro_regular"
+        android:lineHeight="16.41dp"
+        android:text="@string/tag_line"
+        android:textColor="@color/ebon_clay_background"
+        android:textFontWeight="400"
+        android:textSize="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/destinationSearch"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/trip_planner_rounded"
+        android:fontFamily="@font/sourcesanspro_regular"
+        android:lineHeight="23.5dp"
+        android:paddingHorizontal="@dimen/ib_fr_space_20"
+        android:paddingVertical="10dp"
+        android:text="Where are you going Adam?"
+        android:textColor="@color/ebon_clay_background"
+        android:textFontWeight="700"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tripTitle" />
+
+    <LinearLayout
+        android:id="@+id/tripSaved"
+        android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/destinationSearch">
+
+        <include layout="@layout/home_work_saved_layout" />
+
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/firstTrip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:paddingRight="10dp"
+        android:src="@drawable/ic_work"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tripSaved" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sourcesanspro_regular"
+        android:lineHeight="23.5dp"
+        android:text="Mkwajuni Bus Stop"
+        android:textColor="@color/ebon_clay_background"
+        android:textFontWeight="500"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/firstTrip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/firstTrip"
+        app:layout_constraintTop_toTopOf="@+id/firstTrip" />
+
+    <ImageView
+        android:id="@+id/secondTrip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:paddingRight="10dp"
+        android:src="@drawable/ic_work"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/firstTrip" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sourcesanspro_regular"
+        android:lineHeight="23.5dp"
+        android:text="Mkwajuni Bus Stop"
+        android:textColor="@color/ebon_clay_background"
+        android:textFontWeight="500"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/secondTrip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/secondTrip"
+        app:layout_constraintTop_toTopOf="@+id/secondTrip" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
